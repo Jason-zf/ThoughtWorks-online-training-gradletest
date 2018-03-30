@@ -8,7 +8,7 @@ public class PracticeA {
         List<String> result=new ArrayList();
         for (int i = 0; i < collection1.size(); ++i) {
             String elementA = collection1.get(i);
-            if (collection2.indexOf(elementA) != -1) {
+            if (collection2.indexOf(elementA) != -1&&result.indexOf(elementA)==-1) {
                 result.add(elementA);
             }
         }

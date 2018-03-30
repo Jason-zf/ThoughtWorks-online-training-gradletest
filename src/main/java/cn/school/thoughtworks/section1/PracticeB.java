@@ -9,6 +9,8 @@ public class PracticeB {
         PracticeA praticeA = new PracticeA();
         for (int i = 0; i < collection2.size(); ++i) {
             List<String> elementB = collection2.get(i);
+            List<String> subResult=praticeA
+            if(praticeA.collectSameElements(result,))
             result.addAll(praticeA.collectSameElements(collection1,elementB));
         }
         return result;
