@@ -8,9 +8,6 @@ public class PracticeB {
         PracticeA praticeA = new PracticeA();
         List<String> elementsB=new ArrayList<>();
         for (int i = 0; i < collection2.size(); ++i) {
-            List<String> sameElements = praticeA.collectSameElements(elementsB, collection2.get(i));
-            if (sameElements.isEmpty() == false)
-                elementsB.removeAll(sameElements);
             elementsB.addAll(collection2.get(i));
         }
         return praticeA.collectSameElements(collection1,elementsB);

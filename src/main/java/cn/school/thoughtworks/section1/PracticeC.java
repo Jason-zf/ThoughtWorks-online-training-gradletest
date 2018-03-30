@@ -12,13 +12,10 @@ public class PracticeC {
         PracticeA practiceA = new PracticeA();
         List<String> elementsB = new ArrayList<>();
         for (List<String> value : collection2.values()) {
-            List<String> sameElements = practiceA.collectSameElements(elementsB, value);
-            if (sameElements.isEmpty() == false)
-                elementsB.removeAll(sameElements);
             elementsB.addAll(value);
         }
-        result=practiceA.collectSameElements(collection1,elementsB);
-        return result;
+        return practiceA.collectSameElements(collection1, elementsB);
+
     }
 
 }
