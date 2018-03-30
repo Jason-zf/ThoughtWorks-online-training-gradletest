@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class PracticeB {
     Map<String, Integer> countSameElements(List<String> collection1) {
-        //实现练习要求，并改写该行代码。
         Map<String, Integer> result = new HashMap<>();
         int num = 1;
         for (String key : collection1) {
