@@ -1,17 +1,21 @@
 package cn.school.thoughtworks.section1;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.print.DocFlavor;
+import java.util.*;
 
 public class PracticeA {
     List<String> collectSameElements(List<String> collection1, List<String> collection2) {
-        List<String> result=new ArrayList();
-        for (int i = 0; i < collection1.size(); ++i) {
-            String elementA = collection1.get(i);
-            if (collection2.indexOf(elementA) != -1&&result.indexOf(elementA)==-1) {
-                result.add(elementA);
-            }
+        List<String> result = new ArrayList<>(collection1);
+        result.retainAll(collection2);
+        Set<String> set=new HashSet<>();
+        List<String> finalRes=new ArrayList<>();
+        for(int i=0;i<result.size();++i) {
+            if (set.add(result.get(i)))
+                finalRes.add(result.get(i));
         }
-        return result;
+        if (finalRes.size() > 0)
+            return finalRes;
+        else
+            return null;
     }
 }
